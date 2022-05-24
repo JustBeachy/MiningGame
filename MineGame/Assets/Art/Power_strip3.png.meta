@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 3613832364306178236
     second: Power_strip3_2
+  - first:
+      213: 4174637932021077160
+    second: Power_strip3_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -190,6 +193,27 @@ TextureImporter:
       bones: []
       spriteID: cb0a7407369e62230800000000000000
       internalID: 3613832364306178236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_strip3_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4dcfbb41b4fe930800000000000000
+      internalID: 4174637932021077160
       vertices: []
       indices: 
       edges: []

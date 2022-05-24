@@ -78,9 +78,9 @@ public class Elements : MonoBehaviour
 
     public void Clicked()
     {
-        if (clickIndex + (8 - currentElement) < crackList.Count - 1)
+        if (clickIndex + (8 - (currentElement)) < crackList.Count - 1)
         {
-            clickIndex += (8 - currentElement);
+            clickIndex += (8 - (currentElement));
             crackObject.GetComponent<Image>().sprite = crackList[clickIndex];
         }
         else
