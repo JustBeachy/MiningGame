@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Elements.cs" />
+    <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\InventoryItem.cs" />
+    <Compile Include="Assets\Particle.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
