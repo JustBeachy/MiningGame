@@ -11,10 +11,11 @@ public class Elements : MonoBehaviour
     public List<Sprite> elementList;
     public List<Sprite> crackList;
     public GameObject crackObject;
-    int clickIndex;
     int currentElement;
     public GameObject particle;
     public GameObject inventoryObject;
+    float crackStatus = 0;
+    float mineMultiplier = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,49 +63,48 @@ public class Elements : MonoBehaviour
         CreateParticle();
         AddToInventory();
 
-
-        clickIndex = 0;
-        crackObject.GetComponent<Image>().sprite = crackList[clickIndex];
+        crackStatus = 0;
+        crackObject.GetComponent<Image>().sprite = crackList[0];
 
         System.Random rand = new System.Random();
-        int randNum = rand.Next(1, 1001);
+        int randNum = rand.Next(1, 10001);
 
-        if (randNum <= 300)
+        if (randNum > 0)
         {
             GetComponent<Image>().sprite = elementList[0];
             currentElement = 0;
         }
-        if (randNum > 250 && randNum <= 450)
+        if (randNum > 3000)
         {
             GetComponent<Image>().sprite = elementList[1];
             currentElement = 1;
         }
-        if (randNum > 450 && randNum <= 600)
+        if (randNum > 5500)
         {
             GetComponent<Image>().sprite = elementList[2];
             currentElement = 2;
         }
-        if (randNum > 600 && randNum <= 750)
+        if (randNum > 7000 )
         {
             GetComponent<Image>().sprite = elementList[3];
             currentElement = 3;
         }
-        if (randNum > 750 && randNum <= 850)
+        if (randNum > 8500)
         {
             GetComponent<Image>().sprite = elementList[4];
             currentElement = 4;
         }
-        if (randNum > 850 && randNum <= 920)
+        if (randNum > 9000)
         {
             GetComponent<Image>().sprite = elementList[5];
             currentElement = 5;
         }
-        if (randNum > 920 && randNum <= 990)
+        if (randNum > 9500 )
         {
             GetComponent<Image>().sprite = elementList[6];
             currentElement = 6;
         }
-        if (randNum > 990 && randNum <= 1000)
+        if (!isDirtLayer && randNum == 10000 )
         {
             GetComponent<Image>().sprite = elementList[7];
             currentElement = 7;
@@ -115,10 +115,11 @@ public class Elements : MonoBehaviour
 
     public void Clicked()
     {
-        if (clickIndex + (8 - (currentElement)) < crackList.Count - 1)
+        if (crackStatus + (1f / ((float)currentElement + 1f)) * (float)mineMultiplier < (crackList.Count - 1))
         {
-            clickIndex += (8 - (currentElement));
-            crackObject.GetComponent<Image>().sprite = crackList[clickIndex];
+            crackStatus +=  (1f/((float)currentElement+1f))*(float)mineMultiplier;
+            crackObject.GetComponent<Image>().sprite = crackList[(int)crackStatus];
+        
         }
         else
             NewElement();
