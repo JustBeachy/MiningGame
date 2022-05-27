@@ -62,11 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Craftable.cs" />
     <Compile Include="Assets\Elements.cs" />
     <Compile Include="Assets\InfoBox.cs" />
     <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\InventoryItem.cs" />
     <Compile Include="Assets\Particle.cs" />
+    <Compile Include="Assets\VerticalInfoBox.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

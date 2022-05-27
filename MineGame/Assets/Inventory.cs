@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject[] InventoryArray;
-    Hashtable inventory;
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 14230687}
   - component: {fileID: 14230686}
   - component: {fileID: 14230688}
+  - component: {fileID: 14230689}
   m_Layer: 5
   m_Name: Auto-Miner
   m_TagString: Untagged
@@ -239,7 +240,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 14230686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14230689}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &14230689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14230684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 6223022039920803305, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: -6722674006166045939, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 7997257620854131328, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 916076322477249970, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  formulaAmount: 140000000f0000000a00000005000000
+  description: Automatically "clicks" on the mineral layer for you. Click rate is
+    determined by your total energy output.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &48520829
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +589,7 @@ GameObject:
   - component: {fileID: 150945044}
   - component: {fileID: 150945043}
   - component: {fileID: 150945045}
+  - component: {fileID: 150945046}
   m_Layer: 5
   m_Name: Copper Shovel
   m_TagString: Untagged
@@ -659,7 +696,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 150945043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150945046}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &150945046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150945041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 7997257620854131328, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  formulaAmount: 0500000005000000
+  description: Doubles the strength of your manual clicks on the topsoil layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &152628978
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +741,7 @@ GameObject:
   - component: {fileID: 152628981}
   - component: {fileID: 152628980}
   - component: {fileID: 152628982}
+  - component: {fileID: 152628983}
   m_Layer: 5
   m_Name: Hand Crank
   m_TagString: Untagged
@@ -779,7 +849,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 152628980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152628983}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &152628983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152628978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 3605911537621818035, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: -633383789401325659, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: -3327197723138056741, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 03000000030000000100000001000000
+  description: A basic energy generator. It doesn't produce much energy, but it's
+    enough to run a furnace!
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &154290465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1654,7 @@ GameObject:
   - component: {fileID: 377024780}
   - component: {fileID: 377024779}
   - component: {fileID: 377024781}
+  - component: {fileID: 377024782}
   m_Layer: 5
   m_Name: Iron Shovel
   m_TagString: Untagged
@@ -1655,7 +1761,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 377024779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 377024782}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &377024782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: -501985244511526269, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  formulaAmount: 0300000003000000
+  description: Doubles the strength of your manual clicks on the topsoil layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &379302355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,6 +2569,7 @@ GameObject:
   - component: {fileID: 723168088}
   - component: {fileID: 723168087}
   - component: {fileID: 723168089}
+  - component: {fileID: 723168090}
   m_Layer: 5
   m_Name: Copper Pickaxe
   m_TagString: Untagged
@@ -2537,7 +2676,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723168087}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 723168090}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &723168090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723168085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 7997257620854131328, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0500000005000000
+  description: Doubles the strength of your manual clicks on the mineral layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &792884133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2721,7 @@ GameObject:
   - component: {fileID: 792884136}
   - component: {fileID: 792884135}
   - component: {fileID: 792884137}
+  - component: {fileID: 792884138}
   m_Layer: 5
   m_Name: Metal Press
   m_TagString: Untagged
@@ -2656,7 +2828,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792884135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 792884138}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &792884138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792884133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: -501985244511526269, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: -8578840846906612179, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: -8563623145823198445, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: 3762369224775817227, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  formulaAmount: 0a0000000a0000000a0000000a000000
+  description: Presses metal ingots into plates, which are used in crafting advanced
+    machines.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &802873351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,7 +3924,7 @@ GameObject:
   - component: {fileID: 1081048554}
   - component: {fileID: 1081048553}
   m_Layer: 5
-  m_Name: Text
+  m_Name: EnergyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4458,6 +4665,7 @@ GameObject:
   - component: {fileID: 1197035229}
   - component: {fileID: 1197035228}
   - component: {fileID: 1197035230}
+  - component: {fileID: 1197035231}
   m_Layer: 5
   m_Name: Auto-Digger
   m_TagString: Untagged
@@ -4564,7 +4772,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1197035228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1197035231}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1197035231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197035226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 6223022039920803305, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: -6722674006166045939, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 7997257620854131328, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 916076322477249970, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  formulaAmount: 140000000f0000000a00000005000000
+  description: 'Automatically "clicks" on the topsoil layer for you. Click rate is
+    determined by your total energy output. '
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1245806006
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,6 +5614,7 @@ GameObject:
   - component: {fileID: 1361639601}
   - component: {fileID: 1361639600}
   - component: {fileID: 1361639602}
+  - component: {fileID: 1361639603}
   m_Layer: 5
   m_Name: Stone Pickaxe
   m_TagString: Untagged
@@ -5477,7 +5721,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1361639600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1361639603}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1361639603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361639598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 3605911537621818035, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0100000001000000
+  description: Doubles the strength of your manual clicks on the mineral layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1373114067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,6 +6521,7 @@ GameObject:
   - component: {fileID: 1544343701}
   - component: {fileID: 1544343700}
   - component: {fileID: 1544343702}
+  - component: {fileID: 1544343703}
   m_Layer: 5
   m_Name: Solar Panel
   m_TagString: Untagged
@@ -6351,7 +6628,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1544343700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1544343703}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1544343703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544343698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 7997257620854131328, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 916076322477249970, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 21300000, guid: 3e74377bcbe4ba445b18aedb8582504b, type: 3}
+  - {fileID: 8151483822290611682, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 5485842606214344924, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 3200000019000000320000001400000014000000
+  description: The strongest energy generator. Great for increasing the click rate
+    of the Auto-Miner and Auto-Digger.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1588846520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,6 +6677,7 @@ GameObject:
   - component: {fileID: 1588846523}
   - component: {fileID: 1588846522}
   - component: {fileID: 1588846524}
+  - component: {fileID: 1588846525}
   m_Layer: 5
   m_Name: Steam Engine
   m_TagString: Untagged
@@ -6471,7 +6785,41 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1588846522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588846525}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1588846525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588846520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 4361020140285194561, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: -8578840846906612179, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: 21300000, guid: c9227ea7615662b49a7b3a1b28941bd1, type: 3}
+  - {fileID: 5485842606214344924, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0a0000000a0000000500000005000000
+  description: A decent energy generator. Produces enough energy to power a Press.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1598258850
 GameObject:
   m_ObjectHideFlags: 0
@@ -6562,6 +6910,7 @@ GameObject:
   - component: {fileID: 1630265831}
   - component: {fileID: 1630265830}
   - component: {fileID: 1630265832}
+  - component: {fileID: 1630265833}
   m_Layer: 5
   m_Name: Combustion Engine
   m_TagString: Untagged
@@ -6669,7 +7018,42 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1630265830}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1630265833}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1630265833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630265828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 6223022039920803305, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: -6722674006166045939, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 5485842606214344924, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 8151483822290611682, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 14000000140000000a0000000a000000
+  description: A powerful energy generator. Produces enough energy to power the Auto-Miner
+    and Auto-Digger.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1648510012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7589,6 +7973,7 @@ GameObject:
   - component: {fileID: 1798120157}
   - component: {fileID: 1798120156}
   - component: {fileID: 1798120158}
+  - component: {fileID: 1798120159}
   m_Layer: 5
   m_Name: Furnace
   m_TagString: Untagged
@@ -7695,7 +8080,41 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1798120156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1798120159}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1798120159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798120154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 3605911537621818035, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: -4866682361406675291, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: -3191885667660401719, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 050000000500000001000000
+  description: Automatically melts ores into ingots, Ice into Water, and Sand into
+    Glass when the resource is mined. Requires an energy generator to run.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1818110951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8013,6 +8432,7 @@ GameObject:
   - component: {fileID: 1864561397}
   - component: {fileID: 1864561396}
   - component: {fileID: 1864561398}
+  - component: {fileID: 1864561399}
   m_Layer: 5
   m_Name: Gold Pickaxe
   m_TagString: Untagged
@@ -8119,7 +8539,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1864561396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1864561399}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1864561399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864561394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 916076322477249970, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0a0000000a000000
+  description: Doubles the strength of your manual clicks on the mineral layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1880339203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,6 +8584,7 @@ GameObject:
   - component: {fileID: 1880339206}
   - component: {fileID: 1880339205}
   - component: {fileID: 1880339207}
+  - component: {fileID: 1880339208}
   m_Layer: 5
   m_Name: Iron Pickaxe
   m_TagString: Untagged
@@ -8238,7 +8691,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880339205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1880339208}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1880339208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880339203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: -501985244511526269, guid: 808ae05fea03dc44c8ad20ee0c0c9b5c, type: 3}
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0300000003000000
+  description: Doubles the strength of your manual clicks on the mineral layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &1929253673
 GameObject:
   m_ObjectHideFlags: 0
@@ -8789,6 +9274,7 @@ GameObject:
   - component: {fileID: 2083882425}
   - component: {fileID: 2083882424}
   - component: {fileID: 2083882426}
+  - component: {fileID: 2083882427}
   m_Layer: 5
   m_Name: Gold Shovel
   m_TagString: Untagged
@@ -8895,7 +9381,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083882424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2083882427}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2083882427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083882422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 916076322477249970, guid: e41de73b173772b4999a55e0315f4ed8, type: 3}
+  formulaAmount: 0a0000000a000000
+  description: Doubles the strength of your manual clicks on the topsoil layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &2127627680
 GameObject:
   m_ObjectHideFlags: 0
@@ -8908,6 +9426,7 @@ GameObject:
   - component: {fileID: 2127627683}
   - component: {fileID: 2127627682}
   - component: {fileID: 2127627684}
+  - component: {fileID: 2127627685}
   m_Layer: 5
   m_Name: Stone Shovel
   m_TagString: Untagged
@@ -9014,7 +9533,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2127627682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127627685}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2127627685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127627680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f16d2e89b3a47bb70ad3eb2e759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formulaSprites:
+  - {fileID: 5435252889364858795, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  - {fileID: 3605911537621818035, guid: 538b28666209198438cb9ba7bc8b6eb0, type: 3}
+  formulaAmount: 0100000001000000
+  description: Doubles the strength of your manual clicks on the topsoil layer.
+  inventory: {fileID: 1794782199}
+  vertInfoBox: {fileID: 5259428092666413120, guid: 319a116fc6ac92b43bed49b3d2d18444,
+    type: 3}
+  crafted: 0
 --- !u!1 &2128644985
 GameObject:
   m_ObjectHideFlags: 0
