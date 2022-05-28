@@ -21,6 +21,11 @@ public class InventoryItem : MonoBehaviour
         
     }
 
+    public void RefreshQuantity()
+    {
+        GetComponentInChildren<Text>().text = quanitity.ToString();
+    }
+
     public void AddOne()
     {
         quanitity++;

@@ -11,6 +11,9 @@ public class Craftable : MonoBehaviour
     public GameObject inventory;
     public GameObject vertInfoBox;
     public bool crafted;
+    public bool canCraftMultiple;
+    public int quantity;
+    public Sprite onSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +29,7 @@ public class Craftable : MonoBehaviour
     public void Clicked()
     {
         var box =Instantiate(vertInfoBox, transform.parent.parent);
-        box.GetComponent<VerticalInfoBox>().SetInfo(gameObject.name, description, gameObject.GetComponent<Image>().sprite, 0, formulaSprites, formulaAmount);
+        box.GetComponent<VerticalInfoBox>().SetInfo(gameObject.name, description, gameObject.GetComponent<Image>().sprite, 0, formulaSprites, formulaAmount,gameObject);
            
     }
 
@@ -36,21 +39,70 @@ public class Craftable : MonoBehaviour
         int iterator = 0;
         foreach (Sprite s in formulaSprites)
         {
+            
             foreach (GameObject g in inventory.GetComponent<Inventory>().InventoryArray)
             {
-                if(g.GetComponent<Image>().sprite==s)
+                if (g.GetComponent<Image>().sprite == s)
                 {
                     if (g.GetComponent<InventoryItem>().quanitity >= formulaAmount[iterator])
                     {
                         canCraft = true;
                     }
                     else
+                    {
                         canCraft = false;
+                        goto End;
+                    }
                 }
-                iterator++;
+                
+                
             }
+            iterator++;
         }
-        if (canCraft)
+        End:
+        if (canCraft) //craft it
+        {
             crafted = true;
+            RemoveFromInventory();
+            if(onSprite!=null)
+            GetComponent<Image>().sprite = onSprite;
+
+            Image image = GetComponent<Image>();
+            var tempColor = image.color;
+            tempColor.a = 1f;
+            image.color = tempColor;
+
+            //apply bonuses
+            if (gameObject.name.Contains("Pickaxe"))
+                StaticVars.mineralMineMultiplier *= 2;
+            if (gameObject.name.Contains("Shovel"))
+                StaticVars.topsoilMineMultiplier *= 2;
+
+        }
+    }
+
+    public void RemoveFromInventory()
+    {
+        int iterator = 0;
+        foreach (Sprite s in formulaSprites)
+        {
+
+            foreach (GameObject g in inventory.GetComponent<Inventory>().InventoryArray)
+            {
+                if (g.GetComponent<Image>().sprite == s)
+                {
+                    if (g.GetComponent<InventoryItem>().quanitity >= formulaAmount[iterator])
+                    {
+                        g.GetComponent<InventoryItem>().quanitity -= formulaAmount[iterator];
+                        g.GetComponent<InventoryItem>().RefreshQuantity();
+                    }
+                    
+                        
+                }
+
+
+            }
+            iterator++;
+        }
     }
 }

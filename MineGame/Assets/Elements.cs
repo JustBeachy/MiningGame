@@ -15,7 +15,7 @@ public class Elements : MonoBehaviour
     public GameObject particle;
     public GameObject inventoryObject;
     float crackStatus = 0;
-    float mineMultiplier = 1;
+    bool tutorialElements = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +60,8 @@ public class Elements : MonoBehaviour
 
     void NewElement()
     {
+        
+
         CreateParticle();
         AddToInventory();
 
@@ -68,6 +70,12 @@ public class Elements : MonoBehaviour
 
         System.Random rand = new System.Random();
         int randNum = rand.Next(1, 10001);
+
+        if (tutorialElements)
+        {
+            randNum = 1;
+            tutorialElements = false;
+        }
 
         if (randNum > 0)
         {
@@ -115,9 +123,16 @@ public class Elements : MonoBehaviour
 
     public void Clicked()
     {
-        if (crackStatus + (1f / ((float)currentElement + 1f)) * (float)mineMultiplier < (crackList.Count - 1))
+        int multiplier;
+        if (isDirtLayer)
+            multiplier = StaticVars.topsoilMineMultiplier;
+        else
+            multiplier = StaticVars.mineralMineMultiplier;
+
+
+        if (crackStatus + (2f / ((float)currentElement + 1f)) * (float)multiplier < (crackList.Count - 1))
         {
-            crackStatus +=  (1f/((float)currentElement+1f))*(float)mineMultiplier;
+            crackStatus +=  (2f/((float)currentElement+1f))*(float)multiplier;
             crackObject.GetComponent<Image>().sprite = crackList[(int)crackStatus];
         
         }
