@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class VerticalInfoBox : MonoBehaviour
 {
     public GameObject cantCraftScreen;
-    public GameObject button;
+    public GameObject button, onOffButton;
     public Text title, desc;
     public Image img;
     public Image[] craftingRequirements;
@@ -14,7 +14,14 @@ public class VerticalInfoBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (originObject.name.Contains("Press") && originObject.GetComponent<Craftable>().crafted)
+        {
+            onOffButton.SetActive(true);
+            if (StaticVars.PressOn)
+                onOffButton.GetComponentInChildren<Text>().text = "Turn Off";
+            else
+                onOffButton.GetComponentInChildren<Text>().text = "Turn On";
+        }
     }
 
     // Update is called once per frame
@@ -52,6 +59,16 @@ public class VerticalInfoBox : MonoBehaviour
 
         
 
+    }
+
+    public void PressOnOff()
+    {
+        StaticVars.PressOn = !StaticVars.PressOn;
+
+        if (StaticVars.PressOn)
+            originObject.GetComponent<Image>().sprite = originObject.GetComponent<Craftable>().onSprite;
+        else
+            originObject.GetComponent<Image>().sprite = originObject.GetComponent<Craftable>().offSpritePress;
     }
 
     public void TryToCraft()

@@ -13,7 +13,7 @@ public class Craftable : MonoBehaviour
     public bool crafted;
     public bool canCraftMultiple;
     public int quantity;
-    public Sprite onSprite;
+    public Sprite onSprite, offSpritePress;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +77,36 @@ public class Craftable : MonoBehaviour
                 StaticVars.mineralMineMultiplier *= 2;
             if (gameObject.name.Contains("Shovel"))
                 StaticVars.topsoilMineMultiplier *= 2;
+            if (gameObject.name.Contains("Crank"))
+            {
+                StaticVars.EnergyProduction += 2;
+            }
+            if (gameObject.name.Contains("Steam"))
+            {
+                StaticVars.EnergyProduction += 4;
+                StaticVars.HideParticles = true;
+            }
+            if (gameObject.name.Contains("Combustion"))
+            {
+                StaticVars.EnergyProduction += 14;
+                StaticVars.HideParticles = true;
+            }
+            if (gameObject.name.Contains("Solar"))
+            {
+                StaticVars.EnergyProduction += 40f;
+                StaticVars.HideParticles = true;
+            }
+            if (gameObject.name.Contains("Furnace"))
+                StaticVars.FurnaceOn =true;
+            if (gameObject.name.Contains("Press"))
+                StaticVars.PressOn=true;
+            if (gameObject.name.Contains("Digger"))
+                StaticVars.DiggerOn = true;
+            if (gameObject.name.Contains("Miner"))
+                StaticVars.MinerOn = true;
+
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<StaticVars>().UpdateText();
+
 
         }
     }

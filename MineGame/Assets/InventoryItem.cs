@@ -11,8 +11,8 @@ public class InventoryItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Image>().enabled = false;
-        GetComponent<Button>().enabled = false;
+        //GetComponent<Image>().enabled = false;
+        //GetComponent<Button>().enabled = false;
     }
 
     // Update is called once per frame
@@ -29,8 +29,8 @@ public class InventoryItem : MonoBehaviour
     public void AddOne()
     {
         quanitity++;
-        GetComponent<Image>().enabled = true;
-        GetComponent<Button>().enabled = true;
+        //GetComponent<Image>().enabled = true;
+        //GetComponent<Button>().enabled = true;
         GetComponentInChildren<Text>().text = quanitity.ToString();
     }
 
