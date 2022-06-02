@@ -8,6 +8,7 @@ public class InventoryItem : MonoBehaviour
     public int quanitity;
     public GameObject infoPopup;
     public string description;
+    
     // Start is called before the first frame update
     void Start()
     {

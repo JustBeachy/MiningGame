@@ -7,6 +7,8 @@ using System;
 
 public class Elements : MonoBehaviour
 {
+    public GameObject otherElement;//for tutorial
+    public GameObject winScreen;
     public bool isDirtLayer;
     public List<Sprite> elementList;
     public List<Sprite> crackList;
@@ -19,6 +21,7 @@ public class Elements : MonoBehaviour
     float crackStatus = 0;
     bool tutorialElements = true;
     public Sprite diamond;
+    bool tutorial = true;
     
     // Start is called before the first frame update
     void Start()
@@ -99,7 +102,10 @@ public class Elements : MonoBehaviour
     void NewElement()
     {
         if (gameObject.GetComponent<Image>().sprite == diamond)
-            print("You Win!");
+        {
+            var win = Instantiate(winScreen, transform.parent);
+            win.GetComponent<WinScreen>().time.text = "Time: "+StaticVars.time.ToString("0")+" seconds";
+        }
 
         CreateParticle();
         AddToInventory();
@@ -114,6 +120,11 @@ public class Elements : MonoBehaviour
         {
             randNum = 1;
             tutorialElements = false;
+            if (tutorial && !otherElement.GetComponent<Elements>().tutorialElements)
+            {
+                inventoryObject.GetComponent<Inventory>().DestroyTut1();
+                tutorial = false;
+            }
         }
 
         if (randNum > 0)

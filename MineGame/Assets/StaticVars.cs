@@ -17,7 +17,7 @@ public class StaticVars : MonoBehaviour
     public Text EnergyText;
     public Text Timer;
     public GameObject topsoilLayer, mineralLayer;
-    float time;
+    public static float time=-1;
     float mineTimer;
     void Start()
     {
@@ -27,7 +27,9 @@ public class StaticVars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(time>-1)
         time += Time.deltaTime;
+
         Timer.text = "Time: " + time.ToString("0");
 
         if(MinerOn||DiggerOn)

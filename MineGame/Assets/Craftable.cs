@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Craftable : MonoBehaviour
 {
+    public GameObject tut1, tut2;
     public Sprite[] formulaSprites;
     public int[] formulaAmount;
     public string description;
@@ -62,6 +63,7 @@ public class Craftable : MonoBehaviour
         End:
         if (canCraft) //craft it
         {
+            Instantiate(inventory.GetComponent<Inventory>().check,transform);
             crafted = true;
             RemoveFromInventory();
             if(onSprite!=null)
@@ -74,7 +76,14 @@ public class Craftable : MonoBehaviour
 
             //apply bonuses
             if (gameObject.name.Contains("Pickaxe"))
+            {
                 StaticVars.mineralMineMultiplier *= 2;
+                if (gameObject.name.Contains("Stone"))
+                {
+                    Destroy(tut1);
+                    tut2.SetActive(true);
+                }
+            }
             if (gameObject.name.Contains("Shovel"))
                 StaticVars.topsoilMineMultiplier *= 2;
             if (gameObject.name.Contains("Crank"))
@@ -93,7 +102,7 @@ public class Craftable : MonoBehaviour
             }
             if (gameObject.name.Contains("Solar"))
             {
-                StaticVars.EnergyProduction += 40f;
+                StaticVars.EnergyProduction += 39f;
                 StaticVars.HideParticles = true;
             }
             if (gameObject.name.Contains("Furnace"))
@@ -101,9 +110,17 @@ public class Craftable : MonoBehaviour
             if (gameObject.name.Contains("Press"))
                 StaticVars.PressOn=true;
             if (gameObject.name.Contains("Digger"))
+            {
                 StaticVars.DiggerOn = true;
+                if (StaticVars.EnergyProduction < 1)
+                    StaticVars.EnergyProduction = 1;
+            }
             if (gameObject.name.Contains("Miner"))
+            {
                 StaticVars.MinerOn = true;
+                if (StaticVars.EnergyProduction < 1)
+                    StaticVars.EnergyProduction = 1;
+            }
 
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<StaticVars>().UpdateText();
 

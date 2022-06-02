@@ -11,6 +11,7 @@ public class VerticalInfoBox : MonoBehaviour
     public Image img;
     public Image[] craftingRequirements;
     GameObject originObject;
+    float upTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,8 @@ public class VerticalInfoBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        upTime += Time.deltaTime;
+        if (Input.GetMouseButtonUp(0)&&upTime>.1f)
             Destroy(gameObject);
     }
 

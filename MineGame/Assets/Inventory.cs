@@ -5,7 +5,9 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject[] InventoryArray;
-    
+    public GameObject check;
+
+    public GameObject Tutorial1, Tutorial2;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,11 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DestroyTut1()
+    {
+        Destroy(Tutorial1);
+        Tutorial2.SetActive(true);
     }
 }
